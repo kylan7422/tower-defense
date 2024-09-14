@@ -1,6 +1,2 @@
-const xhr = new XMLHttpRequest();
-xhr.addEventListener('load', () =>{
-  console.log(xhr.response);
-})
-xhr.open('GET', 'https://mkiesely.com');
-xhr.send();
+const canvas=document.querySelector('canvas')
+const c=canvas
