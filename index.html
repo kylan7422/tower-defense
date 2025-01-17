@@ -4,10 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tower defense</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="pictures/Icons/favicon.png">
+  <style>
+    canvas{
+      border: solid 1px black;
+    }
+    body, html{
+      background-color: black;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .player-info{
+      font-family: 'Anton SC';
+      color: white;
+      font-size: 40px;
+      position: absolute;
+      top:0;
+      right: 0;
+    }
+    .game-over{
+      z-index: -2;
+    }
+    .isOver{
+      font-size: 100px;
+      color:black;
+      background-color: white;
+      border-radius: 20px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+    }
+  </style>
 </head>
 <body>
-  <canvas></canvas>
-  <script type="module" src="sscripts/cript.js"></script>
+  <div>
+    <canvas></canvas>
+    <div class="player-info">
+      <div class="hearts">10 ♥️</div>
+      <div class="gold">100 💰</div>
+    </div>
+    <div class="game-over">GAME OVER</div>
+  </div>
+  <script src="scripts/data/waypoints.js"></script>
+  <script src="scripts/data/buildTiles.js"></script>
+  <script src="scripts/classes/Sprite.js"></script>
+  <script src="scripts/classes/Projectile.js"></script>
+  <script src="scripts/classes/Enemy.js"></script>
+  <script src="scripts/classes/Player.js"></script>
+  <script src="scripts/classes/Tower.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
